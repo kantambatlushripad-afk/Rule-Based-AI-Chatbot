@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="nebula-dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Rule-Based Chatbot - Futuristic Interactive Web Platform</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Canvas for Particles -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Header & Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo" id="nav-logo">
+                <div class="logo-icon-wrapper">
+                    <i class="fa-solid fa-robot logo-icon"></i>
+                    <span class="logo-pulse"></span>
+                </div>
+                <span class="logo-text">AI <span class="highlight">Rule-Bot</span></span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active" data-section="home"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="#features" class="nav-link" data-section="features"><i class="fa-solid fa-bolt"></i> Features</a>
+                <a href="#about" class="nav-link" data-section="about"><i class="fa-solid fa-circle-info"></i> About</a>
+                <a href="#chatbot" class="nav-link nav-btn" data-section="chatbot"><i class="fa-solid fa-comments"></i> Try Chatbot</a>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Theme Switcher Dropdown -->
+                <div class="theme-selector-wrapper">
+                    <button class="action-btn theme-btn" id="theme-menu-btn" title="Switch Theme">
+                        <i class="fa-solid fa-palette"></i>
+                    </button>
+                    <div class="theme-dropdown" id="theme-dropdown">
+                        <button class="theme-opt active" data-theme="nebula-dark">
+                            <span class="theme-dot nebula"></span> Nebula Dark (Default)
+                        </button>
+                        <button class="theme-opt" data-theme="solar-flare">
+                            <span class="theme-dot solar"></span> Solar Flare
+                        </button>
+                        <button class="theme-opt" data-theme="aurora-green">
+                            <span class="theme-dot aurora"></span> Aurora Green
+                        </button>
+                        <button class="theme-opt" data-theme="cyber-light">
+                            <span class="theme-dot light"></span> Cyber Light
+                        </button>
+                    </div>
+                </div>
+                
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container for SPA Sections -->
+    <main class="main-content">
+        
+        <!-- SECTION 1: HOME -->
+        <section id="home" class="section active">
+            <div class="section-container hero-grid">
+                <div class="hero-content">
+                    <div class="badge-wrapper">
+                        <span class="futuristic-badge"><span class="badge-dot"></span> Rule-Based AI Engine v1.0</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Rule-Based <br>
+                        <span class="gradient-text">Artificial Intelligence</span> <br>
+                        Chatbot
+                    </h1>
+                    <p class="hero-subtitle">
+                        Experience the elegance of structured logic. This platform showcases a deterministic chatbot running entirely on optimized conditional matrices. Highly response-efficient, fully predictable, and lightning-fast.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#chatbot" class="btn btn-primary btn-glow" id="hero-get-started">
+                            <span>Get Started</span> <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#features" class="btn btn-secondary" id="hero-explore-features">
+                            <span>Explore Features</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="visual-container">
+                        <div class="glow-ring outer"></div>
+                        <div class="glow-ring inner"></div>
+                        <div class="ai-avatar-showcase">
+                            <div class="avatar-core">
+                                <i class="fa-solid fa-microchip core-icon"></i>
+                                <div class="orbiting-nodes">
+                                    <div class="node node-1"><i class="fa-solid fa-code"></i></div>
+                                    <div class="node node-2"><i class="fa-solid fa-brain"></i></div>
+                                    <div class="node node-3"><i class="fa-solid fa-network-wired"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: FEATURES -->
+        <section id="features" class="section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Futuristic Features</h2>
+                    <p class="section-subtitle">Discover the properties that make conditional logic remarkably powerful and suitable for high-availability systems.</p>
+                </div>
+                
+                <div class="features-grid">
+                    <!-- Card 1 -->
+                    <div class="feature-card glassmorphism" data-index="0">
+                        <div class="card-glow"></div>
+                        <div class="card-icon-wrapper purple-glow">
+                            <i class="fa-solid fa-code-branch"></i>
+                        </div>
+                        <h3>Rule-Based Responses</h3>
+                        <p>Leverages robust keyphrase mapping to yield targeted responses with absolute reliability. Zero hallucinations guaranteed.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="feature-card glassmorphism" data-index="1">
+                        <div class="card-glow"></div>
+                        <div class="card-icon-wrapper cyan-glow">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <h3>Fast Decision Making</h3>
+                        <p>Executes locally in milliseconds. By bypassing resource-heavy neural network compute, response rates are instantaneous.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="feature-card glassmorphism" data-index="2">
+                        <div class="card-glow"></div>
+                        <div class="card-icon-wrapper green-glow">
+                            <i class="fa-solid fa-comment-dots"></i>
+                        </div>
+                        <h3>Continuous Conversation</h3>
+                        <p>Stores recent message contexts dynamically, simulating organic communication flow while monitoring core user sentiments.</p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="feature-card glassmorphism" data-index="3">
+                        <div class="card-glow"></div>
+                        <div class="card-icon-wrapper cyan-glow">
+                            <i class="fa-solid fa-diagram-project"></i>
+                        </div>
+                        <h3>If-Else Logic</h3>
+                        <p>Built upon elegant boolean architecture. Easily debuggable logic trees that follow structural path routing.</p>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="feature-card glassmorphism" data-index="4">
+                        <div class="card-glow"></div>
+                        <div class="card-icon-wrapper green-glow">
+                            <i class="fa-solid fa-baby"></i>
+                        </div>
+                        <h3>Beginner Friendly</h3>
+                        <p>Excellent template for learning how conversational flows operate. Zero external APIs, zero complex neural libraries.</p>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="feature-card glassmorphism" data-index="5">
+                        <div class="card-glow"></div>
+                        <div class="card-icon-wrapper purple-glow">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </div>
+                        <h3>Easy to Expand</h3>
+                        <p>Adding new logic rules is as simple as inserting an additional conditional block. Scale your bot rules infinitely.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: ABOUT -->
+        <section id="about" class="section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">About the Architecture</h2>
+                    <p class="section-subtitle">Understanding the differences between deterministic logic mapping and statistical deep learning models.</p>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Left Side: Table & Overview -->
+                    <div class="about-info-block glassmorphism">
+                        <h3>Rule-Based AI vs. Machine Learning</h3>
+                        <p class="about-text">
+                            A <strong>Rule-Based AI</strong> runs on fixed principles set manually by human developers (conditional trees). 
+                            In contrast, a <strong>Machine Learning model</strong> tries to recognize patterns in raw datasets, automatically forming its own mathematical associations.
+                        </p>
+                        
+                        <div class="table-responsive">
+                            <table class="comparison-table">
+                                <thead>
+                                    <tr>
+                                        <th>Metric</th>
+                                        <th>Rule-Based Bot</th>
+                                        <th>Machine Learning (ML)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Mechanism</strong></td>
+                                        <td>Manually coded if-else mapping</td>
+                                        <td>Deep learning neural nets</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Accuracy</strong></td>
+                                        <td>100% predictable, no hallucinations</td>
+                                        <td>Probabilistic, potential errors</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Resources</strong></td>
+                                        <td>Extremely light (runs on basic hardware)</td>
+                                        <td>High GPU/RAM, model server costs</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Training</strong></td>
+                                        <td>No data training needed</td>
+                                        <td>Requires gigabytes of dataset content</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: How Chatbot Works -->
+                    <div class="about-steps-block glassmorphism">
+                        <h3>How This Chatbot Works</h3>
+                        <div class="workflow-steps">
+                            <div class="step-item">
+                                <div class="step-num">1</div>
+                                <div class="step-detail">
+                                    <h4>Normalize Input</h4>
+                                    <p>Your input is sanitized: converted to lowercase, extra spaces trimmed, and punctuation marks filtered out.</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-num">2</div>
+                                <div class="step-detail">
+                                    <h4>Keyword Detection & Regex</h4>
+                                    <p>The code uses conditional patterns to match words like <i>"python"</i>, <i>"help"</i>, or <i>"how are you"</i>.</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-num">3</div>
+                                <div class="step-detail">
+                                    <h4>Personality Integration</h4>
+                                    <p>Based on your chosen bot setting (Robo-Tech, Sassy-Bot, Zen-Guide), the matching template shapes its voice style.</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-num">4</div>
+                                <div class="step-detail">
+                                    <h4>Simulated Thought Latency</h4>
+                                    <p>A realistic loading pulse occurs (300-800ms) to emulate computation, followed by a dynamic text-to-speech output.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: CHATBOT PAGE -->
+        <section id="chatbot" class="section">
+            <div class="section-container chatbot-layout">
+                
+                <!-- Chatbot Sidebar (Stats, Personality, Suggested Prompts) -->
+                <aside class="chat-sidebar">
+                    <!-- Stats Card -->
+                    <div class="sidebar-card glassmorphism stats-card">
+                        <h3><i class="fa-solid fa-chart-simple text-glow-cyan"></i> System Statistics</h3>
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <span class="stat-val" id="stat-user-msg">0</span>
+                                <span class="stat-label">User Sent</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-val" id="stat-bot-msg">0</span>
+                                <span class="stat-label">Bot Sent</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-val" id="stat-avg-latency">0ms</span>
+                                <span class="stat-label">Avg Latency</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-val" id="stat-word-count">0</span>
+                                <span class="stat-label">Total Words</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Personality Card -->
+                    <div class="sidebar-card glassmorphism personality-card">
+                        <h3><i class="fa-solid fa-user-gear text-glow-purple"></i> Bot Personality</h3>
+                        <div class="personality-selector-group">
+                            <select id="bot-personality" class="form-select">
+                                <option value="robo-tech">Robo-Tech (Logical / Direct)</option>
+                                <option value="sassy-bot">Sassy-Bot (Playful / Witty)</option>
+                                <option value="zen-guide">Zen-Guide (Calm / Inspirational)</option>
+                            </select>
+                        </div>
+                        <p class="personality-desc" id="personality-desc">
+                            Standard programmatic responses. Straight to the point, clear technical explanations.
+                        </p>
+                    </div>
+
+                    <!-- Suggested Prompts Card -->
+                    <div class="sidebar-card glassmorphism suggested-card">
+                        <h3><i class="fa-solid fa-lightbulb text-glow-green"></i> Try Asking These</h3>
+                        <div class="suggestions-list" id="suggestions-list">
+                            <button class="suggest-chip" data-prompt="Hello">"Hello"</button>
+                            <button class="suggest-chip" data-prompt="What is your name?">"What is your name?"</button>
+                            <button class="suggest-chip" data-prompt="What is the difference between AI and ML?">"AI vs Machine Learning"</button>
+                            <button class="suggest-chip" data-prompt="Tell me about Python">"Python"</button>
+                            <button class="suggest-chip" data-prompt="What can you do?">"What can you do?"</button>
+                            <button class="suggest-chip" data-prompt="Who created you?">"Who created you?"</button>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main Chat Area -->
+                <div class="chat-main glassmorphism">
+                    <!-- Chat Header -->
+                    <div class="chat-header">
+                        <div class="chat-header-info">
+                            <div class="chat-avatar-wrapper">
+                                <div class="chat-avatar-bot">
+                                    <i class="fa-solid fa-robot"></i>
+                                </div>
+                                <span class="status-dot online" id="bot-status-indicator"></span>
+                            </div>
+                            <div>
+                                <h3 id="chat-bot-title">Rule-Bot v1.0</h3>
+                                <span class="chat-status-text" id="chat-status-text">Online • Core Matrix Active</span>
+                            </div>
+                        </div>
+                        <div class="chat-header-actions">
+                            <span class="live-clock" id="live-clock">18:27:00</span>
+                            <button class="chat-action-btn" id="btn-export" title="Download Conversation as TXT">
+                                <i class="fa-solid fa-download"></i>
+                            </button>
+                            <button class="chat-action-btn" id="btn-clear" title="Clear Chat History">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Chat Messages List -->
+                    <div class="chat-messages" id="chat-messages-container">
+                        <!-- Messages dynamically populated by JS -->
+                    </div>
+
+                    <!-- Voice / Input Panel -->
+                    <div class="chat-input-panel">
+                        <!-- Emoji Picker Box -->
+                        <div class="emoji-picker" id="emoji-picker">
+                            <span class="emoji-item">😀</span>
+                            <span class="emoji-item">😂</span>
+                            <span class="emoji-item">😎</span>
+                            <span class="emoji-item">🤖</span>
+                            <span class="emoji-item">🚀</span>
+                            <span class="emoji-item">💡</span>
+                            <span class="emoji-item">🔥</span>
+                            <span class="emoji-item">💻</span>
+                            <span class="emoji-item">🎉</span>
+                            <span class="emoji-item">👍</span>
+                            <span class="emoji-item">✨</span>
+                            <span class="emoji-item">🧠</span>
+                        </div>
+
+                        <!-- Typing Counter indicator overlay -->
+                        <div class="input-actions-bar">
+                            <div class="typing-indicator-wrapper" id="typing-indicator-wrapper">
+                                <div class="typing-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <span class="typing-text">AI is typing...</span>
+                            </div>
+                            <div class="char-counter" id="char-counter">0 / 250</div>
+                        </div>
+
+                        <form id="chat-form" class="chat-input-form">
+                            <button type="button" class="input-btn" id="btn-emoji" title="Insert Emoji">
+                                <i class="fa-regular fa-face-smile"></i>
+                            </button>
+                            <button type="button" class="input-btn" id="btn-mic" title="Voice Input">
+                                <i class="fa-solid fa-microphone" id="mic-icon"></i>
+                            </button>
+                            <input type="text" id="chat-input-field" placeholder="Type a message or use suggestions..." autocomplete="off" maxlength="250">
+                            <button type="submit" class="btn-send" id="btn-send-msg" title="Send Message">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+
+    <!-- Floating Quick assistant Action & Tooltip -->
+    <div class="floating-assistant-wrapper" id="floating-assistant-wrapper">
+        <div class="assistant-tooltip" id="assistant-tooltip">
+            <span>Hi! Ask me anything about programming. Click to chat!</span>
+        </div>
+        <button class="btn-assistant" id="btn-assistant" aria-label="Open Chat Bot">
+            <i class="fa-solid fa-comment-medical"></i>
+            <span class="assistant-pulse"></span>
+        </button>
+    </div>
+
+    <!-- Scroll-to-Top Button -->
+    <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Scroll to top" title="Scroll to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>

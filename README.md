@@ -309,11 +309,11 @@ If you like this project:
 
 ## 📬 Contact
 
-GitHub: https://github.com/your-username
+GitHub: https://github.com/kantambatlushripad-afk
 
-LinkedIn: https://linkedin.com/in/your-profile
+LinkedIn: https://www.linkedin.com/in/shripad-kantambatlu-1ab8bb30a/
 
-Email: your-email@example.com
+Email: kantambatlushripad@gmail.com
 
 ---
 
